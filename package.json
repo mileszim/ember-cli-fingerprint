@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "description": "",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "fingerprint",
+    "fingerprintjs2"
   ],
-  "repository": "",
+  "repository": "https://github.com/mileszim/ember-cli-fingerprint",
   "license": "MIT",
   "author": "Miles Zimmerman",
   "directories": {

@@ -1,7 +1,16 @@
 ember-cli-fingerprint
 ==============================================================================
 
-[Short description of the addon.]
+_currently making this with two operational fingers and two broke wrists so bear with me._
+
+
+
+
+
+
+
+
+
 
 Installation
 ------------------------------------------------------------------------------
