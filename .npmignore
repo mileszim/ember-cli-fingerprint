@@ -21,7 +21,6 @@
 /tests/
 /yarn.lock
 .gitkeep
-.DS_Store
 
 # ember-try
 /.node_modules.ember-try/
