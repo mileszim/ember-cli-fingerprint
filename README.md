@@ -37,8 +37,14 @@ Contributing
 
 ### Linting
 
+<<<<<<< HEAD
 * `yarn lint:js`
 * `yarn lint:js --fix`
+=======
+* `npm run lint:hbs`
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
+>>>>>>> b969578... message
 
 ### Running tests
 
