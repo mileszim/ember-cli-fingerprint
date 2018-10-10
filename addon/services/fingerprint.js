@@ -1,5 +1,5 @@
 import Service from '@ember/service';
-import Fingerprint from 'fingerprintjs2';
+//import Fingerprint2 from 'fingerprintjs2'; TODO: Figure out non-global import
 import { later } from '@ember/runloop';
 
 // Available Options
@@ -39,7 +39,7 @@ const OPTIONS = [
   'excludeAudioFP',
 ];
 
-const TIMEOUT = 50 // delay recommended by valve
+const TIMEOUT = 2000 // delay recommended by valve
 
 export default Service.extend({
   fingerprint: null,
@@ -66,16 +66,27 @@ export default Service.extend({
   },
 
   setOptions(options = {}) {
-    for ((option, value) of options) { this.setOption(option, value); }
+    for (let [option, value] of options) { this.setOption(option, value); }
     return this.get('currentOptions');
   },
 
   _takeFingerprint(options = {}) {
-    return new Promise((resolve, reject) => {
-      new Fingerprint(options).get((result, components) => {
-        if (result) { return resolve({ result, components }); }
-        return reject({ error: "Fingerprint failed." });
-      });
+    return new Promise((resolve) => {
+      if (window.requestIdleCallback) {
+        requestIdleCallback(() => {
+          Fingerprint2.get(options, (components) => {
+            const values = components.map(c => c.value).join('');
+            return resolve(Fingerprint2.x64hash128(values, 31));
+          });
+        });
+      } else {
+        setTimeout(() => {
+          Fingerprint2.get(options, (components) => {
+            const values = components.map(c => c.value).join('');
+            return resolve(Fingerprint2.x64hash128(values, 31));
+          });
+        }, TIMEOUT);
+      }
     });
   }
 });
