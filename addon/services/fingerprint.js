@@ -1,57 +1,19 @@
 import Service from '@ember/service';
 import Fingerprint2 from 'fingerprintjs2';
 import { later } from '@ember/runloop';
-
-// Available Options
-const OPTIONS = [
-  'swfContainerId',
-  'swfPath',
-  'userDefinedFonts',
-  'excludeUserAgent',
-  'excludeLanguage',
-  'excludeColorDepth',
-  'excludeScreenResolution',
-  'excludeAvailableScreenResolution',
-  'excludeTimezoneOffset',
-  'excludeSessionStorage',
-  'excludeIndexedDB',
-  'excludeAddBehavior',
-  'excludeOpenDatabase',
-  'excludeCpuClass',
-  'excludePlatform',
-  'excludeDoNotTrack',
-  'excludeCanvas',
-  'excludeWebGL',
-  'excludeAdBlock',
-  'excludeHasLiedLanguages',
-  'excludeHasLiedResolution',
-  'excludeHasLiedOs',
-  'excludeHasLiedBrowser',
-  'excludeJsFonts',
-  'excludeFlashFonts',
-  'excludePlugins',
-  'excludeIEPlugins',
-  'excludeTouchSupport',
-  'excludePixelRatio',
-  'excludeHardwareConcurrency',
-  'excludeWebGLVendorAndRenderer',
-  'excludeDeviceMemory',
-  'excludeAudioFP',
-];
-
-const TIMEOUT = 2000 // delay recommended by valve
+import FINGERPRINT_OPTIONS from 'ember-cli-fingerprint/utils/fingerprint-options';
 
 export default Service.extend({
   fingerprint: null,
-  components: null,
-  error: null,
-  currentOptions: null,
+  delay: 2000, // ms delay recommended by valve
+  options: {},
+
 
   init() {
     this._super(...arguments);
-    this.set('currentOptions', {});
-    this.set('components', []);
-    later(this, this._takeFingerprint, TIMEOUT);
+    // this.set('currentOptions', {});
+    // this.set('components', []);
+    // later(this, this._takeFingerprint, TIMEOUT);
   },
 
   setOption(option, value) {
