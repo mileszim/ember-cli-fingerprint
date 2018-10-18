@@ -1,5 +1,5 @@
 import Service from '@ember/service';
-import Fingerprint2 from 'fingerprintjs2'; //TODO: Figure out non-global import
+import Fingerprint2 from 'fingerprintjs2';
 import { later } from '@ember/runloop';
 
 // Available Options

@@ -1,15 +1,5 @@
-ember-cli-fingerprint
-==============================================================================
-
-_currently making this with two operational fingers and two broke wrists so bear with me._
-
-
-
-
-
-
-
-
+# ember-cli-fingerprint #
+[![Build Status](https://travis-ci.org/mileszim/ember-particle.svg?branch=master)](https://travis-ci.org/mileszim/ember-particle) [![npm version](https://badge.fury.io/js/ember-particle.svg)](https://badge.fury.io/js/ember-particle) [![Ember Observer Score](https://emberobserver.com/badges/ember-particle.svg)](https://emberobserver.com/addons/ember-particle)
 
 
 Installation
