@@ -1,12 +1,8 @@
 /* eslint-env node */
 module.exports = {
-  // TODO: Wait until npm package 2.0.0 is published
-  // normalizeEntityName() {},
-  //
-  // afterInstall(options) {
-  //   return this.addPackagesToProject([
-  //       { name: 'fingerprintjs2' },
-  //     ]);
-  //   });
-  // }
+  description: require('ember-cli-fingerprint/package').name,
+
+  afterInstall() {
+    return this.addPackageToProject('fingerprintjs2', '^2.0.3');
+  }
 };

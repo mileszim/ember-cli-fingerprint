@@ -7,14 +7,11 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  app.import('vendor/fingerprint2.js');
-
-  /*
-    This build file specifies the options for the dummy test app of this
-    addon, located in `/tests/dummy`
-    This build file does *not* influence how the addon or the app using it
-    behave. You most likely want to be modifying `./index.js` or app's build file
-  */
+  app.import('node_modules/fingerprintjs2/fingerprint2.js', {
+    using: [
+      { transformation: 'cjs', as: 'fingerprintjs2' }
+    ]
+  });
 
   return app.toTree();
 };

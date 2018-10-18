@@ -6,6 +6,10 @@ module.exports = {
   included() {
     this._super.included.apply(this, arguments);
 
-    this.import('vendor/fingerprint2.js');
+    this.import('node_modules/fingerprintjs2/fingerprint2.js', {
+      using: [
+        { transformation: 'cjs', as: 'fingerprintjs2' }
+      ]
+    });
   }
 };
