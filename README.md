@@ -1,5 +1,5 @@
 # ember-cli-fingerprint #
-[![Build Status](https://travis-ci.org/mileszim/ember-particle.svg?branch=master)](https://travis-ci.org/mileszim/ember-particle) [![npm version](https://badge.fury.io/js/ember-particle.svg)](https://badge.fury.io/js/ember-particle) [![Ember Observer Score](https://emberobserver.com/badges/ember-particle.svg)](https://emberobserver.com/addons/ember-particle)
+[![Build Status](https://travis-ci.org/mileszim/ember-cli-fingerprint.svg?branch=master)](https://travis-ci.org/mileszim/ember-cli-fingerprint) [![npm version](https://badge.fury.io/js/ember-cli-fingerprint.svg)](https://badge.fury.io/js/ember-cli-fingerprint) [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-fingerprint.svg)](https://emberobserver.com/addons/ember-cli-fingerprint)
 
 
 **WORK IN PROGRESS**
